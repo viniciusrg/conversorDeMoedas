@@ -1,3 +1,11 @@
+:root{
+  --cor-fundo: #222;
+  --cor-fundo-secundario: #f4f4f4;
+  --cor-principal: #4361ee;
+  --cor-fonte: #333;
+  --sombra: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +13,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--cor-fundo);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 code {

@@ -1,0 +1,8 @@
+.select{
+    background-color: transparent;
+    border: 2px solid var(--cor-principal);
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    color: var(--cor-fonte);
+    padding: .5rem 1rem;
+}
