@@ -1,4 +1,5 @@
 import styles from './container.module.css';
+import React from 'react';
 
 function Container({children}){
     return (

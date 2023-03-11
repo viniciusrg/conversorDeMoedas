@@ -1,4 +1,5 @@
 import styles from './selectmoeda.module.css';
+import React from 'react';
 
 function SelectMoeda(){
     return(
