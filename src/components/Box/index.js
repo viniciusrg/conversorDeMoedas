@@ -8,9 +8,9 @@ import axios from 'axios';
 function Box() {
 
     const [moedaBase, setMoedaBase] = useState('BRL');
-    const [moedaFinal, setMoedaFinal] = useState('USD');
-    console.log(moedaBase);
-    console.log(moedaFinal);
+    const [moedaFinal, setMoedaFinal] = useState('BRL');
+    const [inputBase, setInputBase] = useState('0');
+    const [inputFinal, setInputFinal] = useState('0');
 
     const [result, setResult] = useState();
     useEffect(() => {
@@ -20,20 +20,21 @@ function Box() {
             })
             .catch(erro => {
                 console.log(erro);
+                setInputFinal(inputBase);
             })
     })
 
-    console.log('result: ' + (1 * result))
+    // console.log('result: ' + (1 * result))
 
     return (
         <div className={styles.box}>
             <h1>Conversos de moedas</h1>
             <div className={styles.grupoInput}>
                 <SelectMoeda id='1' moedaBase={moedaBase} setMoedaBase={setMoedaBase} />
-                <Input type='number' placeholder='Insira o valor' />
+                <Input id='1' type='number' placeholder='Insira o valor' valor={inputBase} setInputBase={setInputBase} result={result} setInputFinal={setInputFinal} />
                 <label>Para</label>
                 <SelectMoeda id='2' moedaFinal={moedaFinal} setMoedaFinal={setMoedaFinal} />
-                <Input type='number' placeholder='Resultado' />
+                <Input id='2' type='number' placeholder='Resultado' valor={inputFinal} />
             </div>
         </div >
     )
